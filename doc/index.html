@@ -1,0 +1,57 @@
+<html>
+<head>
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>数字浮屠文档</title>
+</head>
+<body>
+	<div id="catalog">
+		<h2>目录</h2>
+		<a href="#protocal">数据传输协议</a></br>
+		<a href="#login">用户登录细节</a><br>
+		<a href="#register">用户注册细节</a><br>
+		<a href="#last_physical">最新物理量获取的细节</a>
+	</div>
+	<br><br>
+	<p>
+		<a name="protocal"></a>
+		<h2>数据传输协议</h2>
+	</p>
+	<p>
+		<a name="login"></a>
+		<h2>用户登录细节</h2>
+		<div>
+			<h3>参数说明</h3>
+			<li>name:'login'</li>
+			<li>param0:用户名</li>
+			<li>param1:密码</li>
+			<li>登录成功,返回json数据中的data域为{'session_id' : session_id, 'session_key' : session_key}</li>
+		</div>
+	</p>
+	<br><br>
+	<p>
+		<a name="register"></a>
+		<h2>用户注册细节</h2>
+		<div>
+			<h3>参数说明</h3>
+			<li>name:'register'</li>
+			<li>param0:用户名,用户名只能接受大小写字母，数字、下划线和短线,长度不超过15个字符</li>
+			<li>param1:邮箱,邮箱只接受大小写字母、数字、下划线、@和-,长度不超过40个字符</li>
+			<li>param2:真实姓名,真实姓名可接受字母和汉字，长度不超过24个字节</li>
+			<li>param3:密码，可接受任何长度小于56字节的字符</li>
+			<li>注册成功,返回json数据中的data域为'注册成功'</li>
+		</div>
+	</p>
+	<br><br>
+	<p>
+		<a name="last_physical"></a>
+		<h2>最新物理量获取的细节</h2>
+		<div>
+			<h3>参数说明</h3>
+			<li>name:'last_physical'</li>
+			<li>param0:物理量id</li>
+			<li>获取成功，返回json数据中的data域为获取到的单精度数据</li>
+		</div>
+	</p>
+	<p align="center">&copy;IBM技术中心     API设计:姚逢靖     邮箱:heishiyuriyao@gmail.com</p>
+</body>
+</html>
